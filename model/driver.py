@@ -5,3 +5,8 @@
 # @Project : ECShop
 from selenium import webdriver
 
+def browser_chrome():
+    """封装谷歌浏览器"""
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+    return driver
