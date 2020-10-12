@@ -6,6 +6,10 @@
 
 import unittest
 from model.driver import browser_chrome
-class Basecase(unittest.TestCase):
+class BaseCase(unittest.TestCase):
     """所有测试用例基类"""
-    def
+    def setUp(self) -> None:
+        self.driver = browser_chrome()
+
+    def tearDown(self) -> None:
+        self.driver.quit()
