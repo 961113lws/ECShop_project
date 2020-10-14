@@ -4,8 +4,9 @@
 # @File : config.py
 # @Project : ECShop
 import os
-"""封装url"""
+"""封装注册url"""
 zhuce_url = "http://192.168.1.164/upload/user.php?act=register"
-Base_path = os.path.dirname(os.path.abspath(__file__)).split('conf')[0]
-Case_path = os.path.join(Base_path,'testcase')
-Report_path = os.path.join(Base_path,'report')
+"""封装删除注册用户url"""
+base_path = os.path.dirname(os.path.abspath(__file__)).split('conf')[0]
+case_path = os.path.join(base_path,'testcase')
+report_path = os.path.join(base_path,'report')

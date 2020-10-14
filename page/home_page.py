@@ -3,6 +3,7 @@
 # @Email : 2636419668@qq.com
 # @File : home_page.py
 # @Project : ECShop
+"""封装主页基类"""
 from selenium.webdriver.common.by import By
 from page.base_page import BasePage
 

@@ -14,10 +14,10 @@ class TestZhuce(BaseCase):
 
     def test_zhuce01(self):
         """Ecshop_ST_HYGL_001"""
-        """测试注册成功"""
+        """username输入为三位，其他输入合法"""
         # 准备测试数据
         # username = "DTHD"
-        username = random.sample("qwertyuiopasdfghjklzxcvbnm", 10)
+        username = random.sample("qwertyuiopasdfghjklzxcvbnm", 3)
         emai = random.randint(100,100000000000000)
         emai1=str(emai)
         email=emai1+"@qq.com"
@@ -48,7 +48,7 @@ class TestZhuce(BaseCase):
 
     def test_zhuce02(self):
         """Ecshop_ST_HYGL_002"""
-        """测试注册成功"""
+        """username输入15位，其他输入合法"""
         # 准备测试数据
         username = "abcdefghijklmn"
         email = "26440053333@qq.com"
@@ -78,7 +78,7 @@ class TestZhuce(BaseCase):
 
     def test_zhuce03(self):
         """Ecshop_ST_HYGL_003"""
-        """测试注册成功"""
+        """username输入7位，其他输入合法"""
         # 准备测试数据
         username = "abcdefg"
         email = "33440053333@qq.com"
@@ -108,7 +108,7 @@ class TestZhuce(BaseCase):
 
     def test_zhuce04(self):
         """Ecshop_ST_HYGL_004"""
-        """测试注册成功"""
+        """email输入前缀三位，其他输入合法"""
         # 准备测试数据
         username = "abcde"
         email = "264@qq.com"
@@ -138,7 +138,7 @@ class TestZhuce(BaseCase):
 
     def test_zhuce05(self):
         """Ecshop_ST_HYGL_005"""
-        """测试注册成功"""
+        """email前缀输入15位，其他输入合法"""
         # 准备测试数据
         username = "abcdefghij"
         email = "264400533330001@qq.com"
@@ -168,10 +168,10 @@ class TestZhuce(BaseCase):
 
     def test_zhuce06(self):
         """Ecshop_ST_HYGL_006"""
-        """测试注册成功"""
+        """email前缀输入10位，其他输入合法"""
         # 准备测试数据
         username = "abc"
-        email = "26440056663@qq.com"
+        email = "2644005666@qq.com"
         password = "1234567891"
         confirm_password = "1234567891"
 
@@ -198,7 +198,7 @@ class TestZhuce(BaseCase):
 
     def test_zhuce07(self):
         """Ecshop_ST_HYGL_007"""
-        """测试注册成功"""
+        """password和confirm—password输入25位，其他输入合法"""
         # 准备测试数据
         username = "ling"
         email = "26440058883@qq.com"
@@ -228,7 +228,7 @@ class TestZhuce(BaseCase):
 
     def test_zhuce08(self):
         """Ecshop_ST_HYGL_008"""
-        """测试注册成功"""
+        """password和confirm—password输入15位，其他输入合法"""
         # 准备测试数据
         username = "shu"
         email = "26448858683@qq.com"

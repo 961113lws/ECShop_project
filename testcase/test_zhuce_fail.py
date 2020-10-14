@@ -14,7 +14,7 @@ from time import sleep
 class TestZhuce(BaseCase):
     def test_zhuce_fail01(self):
         """Ecshop_ST_HYGL_009"""
-        """测试注册失败"""
+        """username输入小于3位，其他输入合法"""
         # 准备测试数据
         username = "ws"
         email = "264575588@qq.com"
@@ -36,16 +36,15 @@ class TestZhuce(BaseCase):
         lp.input_confirm_password(confirm_password)
         # 点击注册
         lp.click_submit()
-        sleep(3)
         # #断言注册失败
         dy = FailPage(self.driver)
-        yemian = dy.get_fail()
-        self.assertEqual(yemian, "系统信息")
+        yemian = dy.assert_zhuce_fail()
+        self.assertEqual(yemian, "- 用户名长度不能少于 3 个字符。")
 
 
     def test_zhuce_fail02(self):
         """Ecshop_ST_HYGL_010"""
-        """测试注册失败"""
+        """email输入前缀为空，其他输入合法"""
         # 准备测试数据
         username = "zshr"
         email = "@qq.com"
@@ -67,10 +66,9 @@ class TestZhuce(BaseCase):
         lp.input_confirm_password(confirm_password)
         # 点击注册
         lp.click_submit()
-        sleep(3)
         # #断言注册失败
         dy = FailPage(self.driver)
-        yemian = dy.get_fail01()
+        yemian = dy.tishi_message()
         self.assertEqual(yemian, "* 邮件地址不合法")
 
 
